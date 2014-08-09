@@ -101,6 +101,7 @@ default_alloc_pages(size_t n) {
         if(found->property > n) {
             struct Page *more = found + n;
             more->property = found->property - n;
+            SetPageProperty(more);
             list_add_after(&found->page_link, &more->page_link);
         }
         list_del(&found->page_link);
