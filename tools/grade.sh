@@ -168,7 +168,7 @@ build_run() {
     if $verbose; then
         echo "$make $@ ..."
     fi
-    $make $makeopts $@ 'DEFS+=-DDEBUG_GRADE' > $out 2> $err
+    $make $makeopts $@ > $out 2> $err
 
     if [ $? -ne 0 ]; then
         echo $make $@ failed
