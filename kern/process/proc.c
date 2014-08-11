@@ -116,7 +116,7 @@ alloc_proc(void) {
      *       struct proc_struct *cptr, *yptr, *optr;     // relations between processes
 	 */
         //other fields remain 0 (memset)
-     //LAB6 YOUR CODE : (update LAB5 steps)
+     //LAB6 2013011352 : (update LAB5 steps)
     /*
      * below fields(add in LAB6) in proc_struct need to be initialized
      *     struct run_queue *rq;                       // running queue contains Process
@@ -126,6 +126,7 @@ alloc_proc(void) {
      *     uint32_t lab6_stride;                       // FOR LAB6 ONLY: the current stride of the process
      *     uint32_t lab6_priority;                     // FOR LAB6 ONLY: the priority of process, set by lab6_set_priority(uint32_t)
      */
+        list_init(&proc->run_link);
     }
     return proc;
 }
