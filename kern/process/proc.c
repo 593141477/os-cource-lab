@@ -127,6 +127,7 @@ alloc_proc(void) {
      *     uint32_t lab6_priority;                     // FOR LAB6 ONLY: the priority of process, set by lab6_set_priority(uint32_t)
      */
         list_init(&proc->run_link);
+        proc->lab6_priority = 1;
     }
     return proc;
 }
